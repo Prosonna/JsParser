@@ -11,7 +11,7 @@ namespace JsParsing
         public static void Main()
         {
 
-            //   string path = @"c:\Prosonna\Protractor\preliminary_payment_reports.js";
+            //   string path = @"c:\Prosonna\Protractor\Medicare_ManualAdjustment-spec.js";
             //   string readText = File.ReadAllText(path);
             ////   Console.WriteLine(readText);
             //   string pattern = @"describe\('[^']*', function \(\) {.*?it\('([^']*)-Expected result-([^']*)',";
@@ -30,7 +30,7 @@ namespace JsParsing
             //   }
 
 
-            string path = @"c:\Prosonna\tasnima\Data Maintenance_Program Product - Formula Associations.js";
+            string path = @"c:\Prosonna\nabila\Medicare_ManualAdjustment-spec.js";
             string readText = File.ReadAllText(path);
             var csv = new StringBuilder(); 
 
@@ -54,7 +54,7 @@ namespace JsParsing
                 }
                 //Console.WriteLine(itemList);
 
-                string pattern2 = @".*?it\('([^']*) -EXPECTED RESULT- ([^']*)',";
+                string pattern2 = @".*?it\('([^']*) -Expected result- ([^']*)',";
 
                 int count = 0;
                 foreach (Match m2 in Regex.Matches(itemList, pattern2, options))
